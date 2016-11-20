@@ -9,7 +9,7 @@
   {% for location in locations %}
   <p>{{ location.city }}</p>
   <p>{{ location.state }}</p>
-  <p>{{ location.img_url }}</p>
+  <img src="{{ location.img_url}}" width="80"  />
   {% endfor %}
 </body>
 </html>
