@@ -6,8 +6,10 @@
 </head>
 <body>
   <h1>TinyTravelers</h1>
-  <p>{{ tiny_traveler_name }}</p>
-  <p>{{ tiny_traveler_age }} </p>
-
+  {% for location in locations %}
+  <p>{{ location.city }}</p>
+  <p>{{ location.state }}</p>
+  <p>{{ location.img_url }}</p>
+  {% endfor %}
 </body>
 </html>
