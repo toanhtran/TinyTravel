@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Location
 # Create your views here.
 #
 # def home(request):
 #     return HttpResponse('<h1>Hello Tiny Travelers!</h1>')
+
 def home(request):
-    context = {'locations':locations }
-    return render(request, 'index.html', context)
+    locations = Location.objects.all()
+    return render(request, 'index.html', {'locations': locations})
 
 class Location:
     def __init__(self, city, state, img_url):
