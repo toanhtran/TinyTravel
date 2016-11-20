@@ -10,11 +10,6 @@ def home(request):
     locations = Location.objects.all()
     return render(request, 'index.html', {'locations': locations})
 
-class Location:
-    def __init__(self, city, state, img_url):
-        self.city = city
-        self.state = state
-        self.img_url = img_url
 
 locations = [
     Location("Fool's Falls", "CO",

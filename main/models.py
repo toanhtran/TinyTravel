@@ -7,4 +7,5 @@ class Location(models.Model):
     img_url = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.city
+        return self.state
